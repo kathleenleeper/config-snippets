@@ -9,3 +9,9 @@ The delightfully simple syntax is:
 ```
 $ sudo dnf install 'tex(beamer.cls)' 
 ```
+
+To get Tufte specifically, the missing dependencies (as of time of writing, of course):
+```
+$ sudo dnf install 'tex(tufte-handout.cls)' 'tex(hardwrap.sty)'
+```
+If you have opened LyX, reconfigure and restart the program to load changes, as per usual.
