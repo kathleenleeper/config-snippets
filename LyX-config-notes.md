@@ -1,12 +1,12 @@
 Using Lyx is a way to avoid LaTeX, but unfortunately I particularly like the Tufte classes, as I am a cheap-n-easy design b***\h,  which upon initial install you will find does not work due to not having all the classes you need.
 
 # installing latex dependencies with DNF
-However, instead of wrestling with system files, once Lyx is installed, you can use dnf to install additional missing classes.
+Once Lyx is installed, you can use dnf to install additional missing classes.
 
 problem description: https://wiki.lyx.org/LaTeX/TeXLivePackages
 solution: https://docs.fedoraproject.org/en-US/neurofedora/latex/
 
-The delightfully simple syntax is:
+delightfully simple syntax is:
 ```
 $ sudo dnf install 'tex(beamer.cls)' 
 ```
@@ -19,9 +19,9 @@ If you have opened LyX, reconfigure and restart the program to load changes, as 
 
 # managing Tufte citations
 
-Using the Tufte handout class in LyX is beautiful and my preferred notetaking format, but citations are not fun. Among other reasons, as of writing, the only way to achieve proper side citations is by copying the sample handout file and editing appropriately. This is...not viable. Even when done 'properly' (i.e. Lyx rewrites the /cite inset to be /footnote/citep{} in the sample handout), the citations are incredibly long (full author list, title, all information) because they are meant to serve as full citations, and they are long *every* time they are cited. Sadly, there isn't tracking and the consequent ibid. type abbreviations.
+As of writing, the only way to achieve proper side citations is by copying the sample handout file and editing appropriately. Even when done 'properly' (i.e. Lyx rewrites the /cite inset to be /footnote/citep{} in the sample handout), the citations are too long (full author list, title, all information) because they are meant to serve as full citations. SAdly, no tracking to generate the consequent ibid. type abbreviations.
 
-Biblatex solves these. Implementing this takes a couple of steps, and citations need to be manually input with \autocite{key}, but...they're pretty, and they take Biblatex formatting commands, which means if you do use a full citation in the side notes it doesn't do it everytime. Onwards.
+Enter biblatex; citations need to be manually input with \autocite{key}, but they're pretty, and they take Biblatex formatting commands, which manages citation length.
 
 ## Biblatex setup
 
