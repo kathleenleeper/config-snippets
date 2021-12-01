@@ -1,1 +1,1 @@
-Snippets + troubleshooting for running Fedora 33 in an academic environment.
+Snippets + troubleshooting for running Fedora [x] in an academic environment. YMMV.
